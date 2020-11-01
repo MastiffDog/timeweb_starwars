@@ -9,6 +9,7 @@ export default {
             }
             axios.get(url)
             .then(res=>{
+                //create an array for 2 columns map on screen
                 this.personalities = []
                 let people = [...res.data.results]
                 let pair = []
@@ -21,7 +22,7 @@ export default {
                     people.shift()
                 }
                 if(pair) { this.personalities.push(pair) }
-                
+
                 this.dataLoaded = true  
                 //pagination size setup
                 let totalPeople = res.data.count

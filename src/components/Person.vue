@@ -66,10 +66,10 @@
       }
     },
     updated () {
-        if(this.getPerson.films.length>0) {
-            this.filmExisted = true
-            this.$store.dispatch('setFilms',this.getPerson.films)
-         }
+      if(this.getPerson.films.length>0) {
+        this.filmExisted = true
+        this.$store.dispatch('setFilms',this.getPerson.films)
+      }
     }
   }
 </script>

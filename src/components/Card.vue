@@ -6,7 +6,6 @@
           <md-card-header>
             <div class="md-title">{{person.name}}</div>
           </md-card-header>
-
           <md-card-content class="content">
             <div class="md-layout md-gutter">
               <div class="md-layout-item">
@@ -36,7 +35,6 @@
   </div>  
 </template>
 
-
 <script>
   import axios from 'axios'
   export default {
@@ -51,14 +49,14 @@
     data: ()=>{
       return {
         starships: [],
-        exists: false
-    }
+        exists: false,
+      }
     },
     methods: {
       getPerson() {   
         this.$store.dispatch('setNewPersonState')
         this.$store.dispatch('setNewPerson',this.person)
-      }
+      },
     },
     mounted() {
       if(this.person.starships.length>0) {
@@ -74,13 +72,15 @@
            })
            .catch(err=>{throw err})
       }
-    }  
+    }    
   }
 </script>
 
 
 <style lang="scss" scoped>
- 
+  .link-page {
+    color: red;
+  }
   .md-card {
     width: 600px;
     margin: 4px;
