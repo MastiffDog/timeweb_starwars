@@ -1,17 +1,22 @@
-import NotFound from "@/views/NotFound.vue"
+import NotFound from "@/views/NotFound.vue";
 
-const Page = () => import("@/views/Page.vue")
+const Page = () => import("@/views/Page.vue");
+const Person = () => import("@/views/Person.vue");
 
 const routes = [
-    {
-      path: "/page/:id",
-      component: Page
-    },
-    {
-      path: "*",
-      component: NotFound
-    }
-]
+  {
+    path: "/page/:id",
+    component: Page,
+  },
+  {
+    path: "/people/:id",
+    component: Person,
+  },
+  {
+    path: "*",
+    component: NotFound,
+  },
+];
 
 /**
  * Asynchronously load view (Webpack Lazy loading compatible)
